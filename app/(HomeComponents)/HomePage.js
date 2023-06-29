@@ -12,6 +12,7 @@ const HomePage = () => {
 				width: "100%",
 				height: "100%",
 				fontFamily: "Space Mono",
+				marginTop: "2rem",
 			}}>
 			{/* <div
 				style={{
