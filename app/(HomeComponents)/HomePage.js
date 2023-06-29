@@ -12,7 +12,7 @@ const HomePage = () => {
 				width: "100%",
 				height: "100%",
 				fontFamily: "Space Mono",
-				textAlign: "center",
+				// textAlign: "center",
 			}}>
 			{/* <div
 				style={{
@@ -25,16 +25,36 @@ const HomePage = () => {
 			</div> */}
 			<div class="container">
 				<div class="stack" id="stack-main">
-					<span style={{ fontFamily: "Space Mono" }} id="stack-1">
+					<span
+						style={{
+							fontFamily: "Space Mono",
+							textAlign: "center",
+						}}
+						id="stack-1">
 						THE NOMADIC BOT
 					</span>
-					<span style={{ fontFamily: "Space Mono" }} id="stack-2">
+					<span
+						style={{
+							fontFamily: "Space Mono",
+							textAlign: "center",
+						}}
+						id="stack-2">
 						THE NOMADIC BOT
 					</span>
-					<span style={{ fontFamily: "Space Mono" }} id="stack-3">
+					<span
+						style={{
+							fontFamily: "Space Mono",
+							textAlign: "center",
+						}}
+						id="stack-3">
 						THE NOMADIC BOT
 					</span>
-					<span style={{ fontFamily: "Space Mono" }} id="stack-4">
+					<span
+						style={{
+							fontFamily: "Space Mono",
+							textAlign: "center",
+						}}
+						id="stack-4">
 						THE NOMADIC BOT
 					</span>
 				</div>
