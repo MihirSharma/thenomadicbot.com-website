@@ -209,30 +209,35 @@ a {
 @media only screen and (max-width: 1200px) {
   .container {
     font-size: 2rem;
+    margin: 1rem;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .container {
     font-size: 2rem;
+    margin: 1rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .container {
     font-size: 1.5rem;
+    margin: 1rem;
   }
 }
 
 @media only screen and (max-width: 400px) {
   .container {
     font-size: 1rem;
+    margin: 1rem;
   }
 }
 
 @media only screen and (max-width: 300px) {
   .container {
     font-size: 0.75rem;
+    margin: 0.75rem;
   }
 }
 
