@@ -12,7 +12,6 @@ const HomePage = () => {
 				justifyContent: "center",
 				width: "100%",
 				height: "100%",
-				fontFamily: "Space Mono",
 			}}>
 			{/* <div
 				style={{
