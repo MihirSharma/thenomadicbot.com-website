@@ -38,7 +38,7 @@ const HomePage = () => {
 						THE NOMADIC BOT
 					</span>
 				</div>
-				<span>welcomes you</span>
+				<span className="right">welcomes you</span>
 			</div>
 			<div style={{ fontSize: "2rem", lineHeight: "5rem" }}>
 				How may I serve your software needs?
