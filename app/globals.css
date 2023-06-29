@@ -209,6 +209,9 @@ a {
 @media only screen and (max-width: 1200px) {
   .container {
     font-size: 2rem;
+    
+  }
+  .responsive {
     margin: 1rem;
   }
 }
@@ -216,6 +219,9 @@ a {
 @media only screen and (max-width: 800px) {
   .container {
     font-size: 2rem;
+    
+  }
+  .responsive {
     margin: 1rem;
   }
 }
@@ -223,6 +229,9 @@ a {
 @media only screen and (max-width: 600px) {
   .container {
     font-size: 1.5rem;
+    
+  }
+  .responsive {
     margin: 1rem;
   }
 }
@@ -230,6 +239,9 @@ a {
 @media only screen and (max-width: 400px) {
   .container {
     font-size: 1rem;
+    
+  }
+  .responsive {
     margin: 1rem;
   }
 }
@@ -237,6 +249,9 @@ a {
 @media only screen and (max-width: 300px) {
   .container {
     font-size: 0.75rem;
+    
+  }
+  .responsive {
     margin: 0.75rem;
   }
 }

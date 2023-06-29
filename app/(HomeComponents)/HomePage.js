@@ -4,6 +4,7 @@ import glitchStyles from "./glitch.css";
 const HomePage = () => {
 	return (
 		<div
+			className="responsive"
 			style={{
 				display: "flex",
 				flexDirection: "column",
