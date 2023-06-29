@@ -22,8 +22,8 @@ const HomePage = () => {
 				}}>
 				The Nomadic Bot welcomes you
 			</div> */}
-			<div class="container">
-				<div class="stack" id="stack-main">
+			<div className="container">
+				<div className="stack" id="stack-main">
 					<span style={{ fontFamily: "Space Mono" }} id="stack-1">
 						THE NOMADIC BOT
 					</span>
@@ -37,7 +37,7 @@ const HomePage = () => {
 						THE NOMADIC BOT
 					</span>
 				</div>
-				<span class="right">welcomes you</span>
+				<span className="right">welcomes you</span>
 			</div>
 			<div style={{ fontSize: "2rem", lineHeight: "5rem" }}>
 				How may I serve your software needs?
