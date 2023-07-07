@@ -1,7 +1,62 @@
+"use client";
+
+import { useState } from "react";
 import styles from "../globals.css";
 import glitchStyles from "./glitch.css";
+import { BrowserProvider, ethers } from "ethers";
+
+let provider = null;
+const hostAddr = "0x9d3AF4194b3e07d45d0DcBD21dE95edE18B3A221";
+let signer = null;
+
+const connectToWallet = async (setInputState) => {
+	try {
+		provider = new BrowserProvider(window.ethereum);
+		signer = await provider.getSigner();
+		console.log(signer);
+		setInputState(true);
+	} catch (e) {
+		console.log(e);
+	}
+};
+
+const sendTransaction = async (ethAmount, setInputState) => {
+	let validEth = false;
+	let ethVal = "0";
+	try {
+		ethVal = ethers.parseEther(ethAmount, "ether");
+		console.log(ethVal);
+		if (ethVal !== 0n) validEth = true;
+	} catch (e) {
+		validEth = false;
+	}
+	console.log("Check valid ether bool : ", validEth);
+	try {
+		if (validEth) {
+			let tx = {
+				to: hostAddr,
+				value: ethVal,
+			};
+			console.log("Starting Tx");
+			let transaction = await signer.sendTransaction(tx);
+			console.log(transaction);
+			let receipt = await transaction.wait(2);
+			console.log(receipt);
+		}
+	} catch (e) {
+		console.log(e);
+	}
+	setInputState(false);
+};
+
+const handleChange = (e, setEthAmount) => {
+	setEthAmount(e.target.value);
+};
 
 const HomePage = () => {
+	let [ethAmount, setEthAmount] = useState("0");
+	let [inputState, setInputState] = useState(false);
+
 	return (
 		<div
 			className="responsive"
@@ -13,15 +68,6 @@ const HomePage = () => {
 				width: "100%",
 				height: "100%",
 			}}>
-			{/* <div
-				style={{
-					fontSize: "5rem",
-					lineHeight: "5rem",
-					marginBottom: "2rem",
-					// fontWeight: "normal",
-				}}>
-				The Nomadic Bot welcomes you
-			</div> */}
 			<div className="container">
 				<div className="stack" id="stack-main">
 					<span style={{ fontFamily: "Space Mono" }} id="stack-1">
@@ -57,6 +103,60 @@ const HomePage = () => {
 					href="https://calendly.com/mihirsharmaofficial">
 					here
 				</a>
+			</div>
+			<div
+				onClick={() => connectToWallet(setInputState)}
+				style={{
+					fontSize: "2rem",
+					lineHeight: "5rem",
+					border: "2rem ridge #32a1ce",
+					padding: "1rem",
+					cursor: "pointer",
+				}}>
+				Buy me lunch
+			</div>
+			<div
+				style={{
+					fontSize: "2rem",
+					lineHeight: "5rem",
+					display: "flex",
+					flexDirection: "row",
+					alignItems: "center",
+					justifyContent: "center",
+					marginTop: "1rem",
+				}}>
+				{inputState ? (
+					<>
+						<input
+							style={{
+								height: "3rem",
+								fontSize: "2rem",
+								paddingLeft: "1rem",
+							}}
+							type="text"
+							placeholder="Enter ETH amount"
+							value={ethAmount}
+							onChange={(e) =>
+								handleChange(e, setEthAmount, setInputState)
+							}
+						/>
+						<button
+							style={{
+								marginLeft: "1rem",
+								height: "3rem",
+								fontSize: "1.5rem",
+								textAlign: "center",
+								paddingBottom: "3px",
+								paddingLeft: "1rem",
+								paddingRight: "1rem",
+							}}
+							onClick={() =>
+								sendTransaction(ethAmount, setInputState)
+							}>
+							Send ETH
+						</button>
+					</>
+				) : null}
 			</div>
 			<div style={{ fontSize: "2rem", lineHeight: "5rem" }}>
 				My specialties
