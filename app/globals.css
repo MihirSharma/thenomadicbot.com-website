@@ -102,6 +102,25 @@ a {
   text-decoration: none;
 }
 
+.body_text{
+  font-size: 2rem; 
+  line-height: 5rem;
+}
+
+.input{
+  height: 3rem;
+  font-size: 2rem;
+}
+
+.lunch{
+margin-bottom: 1rem;
+  font-size: 2rem;
+	line-height: 5rem;
+	border: 2rem ridge #32a1ce;
+	padding: 1rem;
+  cursor: pointer;
+}
+
 .container {
   color: var(--color);
   font-size: 2rem;
@@ -124,7 +143,7 @@ a {
   font-weight: normal;
   grid-row-start: 1;
   grid-column-start: 1;
-  font-size: 4rem;
+  font-size: 2rem;
   --stack-height: calc(100% / var(--stacks) - 1px);
   --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
   --clip-top: calc(var(--stack-height) * var(--index));
@@ -211,8 +230,26 @@ a {
     font-size: 2rem;
     
   }
+  .stack span{
+    font-size: 4rem;
+  }
   .responsive {
     margin: 3rem 2rem;
+  }
+  .body_text{
+    font-size: 2rem; 
+    line-height: 5rem;
+  }
+  .input{
+    height: 3rem;
+    font-size: 2rem;
+  }
+  .lunch{
+margin-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 5rem;
+    border: 2rem ridge #32a1ce;
+    padding: 1rem;
   }
 }
 
@@ -221,8 +258,26 @@ a {
     font-size: 2rem;
     
   }
+  .stack span{
+    font-size: 4rem;
+  }
   .responsive {
     margin: 2rem 1rem;
+  }
+  .body_text{
+    font-size: 2rem; 
+    line-height: 5rem;
+  }
+  .input{
+    height: 3rem;
+    font-size: 2rem;
+  }
+  .lunch{
+margin-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 5rem;
+    border: 2rem ridge #32a1ce;
+    padding: 1rem;
   }
 }
 
@@ -231,8 +286,26 @@ a {
     font-size: 2rem;
     
   }
+  .stack span{
+    font-size: 2rem;
+  }
   .responsive {
     margin: 2rem 1rem;
+  }
+  .body_text{
+    font-size: 1.5rem; 
+    line-height: 3rem;
+  }
+  .input{
+    height: 2rem;
+    font-size: 1.5rem;
+  }
+  .lunch{
+margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    border: 1rem ridge #32a1ce;
+    padding: 0.5rem;
   }
 }
 
@@ -241,18 +314,54 @@ a {
     font-size: 1.5rem;
     
   }
+  .stack span{
+    font-size: 2rem;
+  }
   .responsive {
     margin: 2rem 1rem;
   }
+  .body_text{
+    font-size: 1.5rem; 
+    line-height: 3rem;
+  }
+  .input{
+    height: 2rem;
+    font-size: 1.5rem;
+  }
+  .lunch{
+margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    border: 1rem ridge #32a1ce;
+    padding: 0.5rem;
+  }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .container {
     font-size: 1rem;
     
   }
+  .stack span{
+    font-size: 2rem;
+  }
+  .body_text{
+    font-size: 1rem; 
+    line-height: 2rem;
+  }
   .responsive {
     margin: 2rem 1rem;
+  }
+  .input{
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+  .lunch{
+margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    border: 0.5rem ridge #32a1ce;
+    padding: 0.5rem;
   }
 }
 
@@ -261,8 +370,26 @@ a {
     font-size: 0.75rem;
     
   }
+  .stack span{
+    font-size: 1rem;
+  }
+  .body_text{
+    font-size: 0.75rem; 
+    line-height: 1rem;
+  }
   .responsive {
     margin: 1rem 0.75rem;
+  }
+  .input{
+    height: 1rem;
+    font-size: 0.75rem;
+  }
+  .lunch{
+margin-bottom: 1rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    border: 0.25rem ridge #32a1ce;
+    padding: 0.25rem;
   }
 }
 

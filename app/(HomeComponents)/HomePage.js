@@ -49,6 +49,10 @@ const sendTransaction = async (ethAmount, setInputState) => {
 	setInputState(false);
 };
 
+const handleCall = () => {
+	window.location.href = "https://calendly.com/mihirsharmaofficial";
+};
+
 const handleChange = (e, setEthAmount) => {
 	setEthAmount(e.target.value);
 };
@@ -65,8 +69,8 @@ const HomePage = () => {
 				flexDirection: "column",
 				alignItems: "center",
 				justifyContent: "center",
-				width: "100%",
-				height: "100%",
+				// width: "100%",
+				// height: "100%",
 			}}>
 			<div className="container">
 				<div className="stack" id="stack-main">
@@ -85,10 +89,10 @@ const HomePage = () => {
 				</div>
 				<span className="right">welcomes you</span>
 			</div>
-			<div style={{ fontSize: "2rem", lineHeight: "5rem" }}>
+			<div className="body_text">
 				How may I serve your software needs?
 			</div>
-			<div style={{ fontSize: "2rem", lineHeight: "5rem" }}>
+			<div className="body_text">
 				Write to me at{" "}
 				<a
 					style={{ color: "#aaaaff" }}
@@ -96,23 +100,12 @@ const HomePage = () => {
 					mihir@thenomadicbot.com
 				</a>
 			</div>
-			<div style={{ fontSize: "2rem", lineHeight: "5rem" }}>
-				Book a call{" "}
-				<a
-					style={{ color: "#aaaaff" }}
-					href="https://calendly.com/mihirsharmaofficial">
-					here
-				</a>
+			<div onClick={handleCall} className="body_text lunch">
+				Book a call here
 			</div>
 			<div
 				onClick={() => connectToWallet(setInputState)}
-				style={{
-					fontSize: "2rem",
-					lineHeight: "5rem",
-					border: "2rem ridge #32a1ce",
-					padding: "1rem",
-					cursor: "pointer",
-				}}>
+				className="lunch">
 				Buy me lunch
 			</div>
 			<div
@@ -128,9 +121,9 @@ const HomePage = () => {
 				{inputState ? (
 					<>
 						<input
+							class_name="input"
 							style={{
-								height: "3rem",
-								fontSize: "2rem",
+								// height: "3rem",
 								paddingLeft: "1rem",
 							}}
 							type="text"
@@ -141,10 +134,9 @@ const HomePage = () => {
 							}
 						/>
 						<button
+							class_name="input"
 							style={{
 								marginLeft: "1rem",
-								height: "3rem",
-								fontSize: "1.5rem",
 								textAlign: "center",
 								paddingBottom: "3px",
 								paddingLeft: "1rem",
@@ -158,21 +150,19 @@ const HomePage = () => {
 					</>
 				) : null}
 			</div>
-			<div style={{ fontSize: "2rem", lineHeight: "5rem" }}>
-				My specialties
-			</div>
+			<div className="body_text">My specialties</div>
 			<ul
+				className="body_text"
 				style={{
 					display: "flex",
 					flexDirection: "column",
 					alignItems: "center",
 					justifyContent: "center",
-					width: "100%",
+					width: "80vw",
 					height: "100%",
-					fontSize: "2rem",
-					lineHeight: "3rem",
 				}}>
 				<li>Full Stack development</li>
+				<li>Mobile development</li>
 				<li>Web development</li>
 				<li>Web3 solutions</li>
 			</ul>
