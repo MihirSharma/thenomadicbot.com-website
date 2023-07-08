@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from "../globals.css";
 import glitchStyles from "./glitch.css";
 import { BrowserProvider, ethers } from "ethers";
+import ListElements from "./ListElements";
 
 let provider = null;
 const hostAddr = "0x9d3AF4194b3e07d45d0DcBD21dE95edE18B3A221";
@@ -151,21 +152,7 @@ const HomePage = () => {
 				) : null}
 			</div>
 			<div className="body_text">My specialties</div>
-			<ul
-				className="body_text"
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "center",
-					justifyContent: "center",
-					width: "80vw",
-					height: "100%",
-				}}>
-				<li>Full Stack development</li>
-				<li>Mobile development</li>
-				<li>Web development</li>
-				<li>Web3 solutions</li>
-			</ul>
+			<ListElements />
 		</div>
 	);
 };
